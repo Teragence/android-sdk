@@ -51,7 +51,37 @@ android.permission.WAKE_LOCK
 android.permission.RECEIVE_BOOT_COMPLETED
 ```
 
-5. Troubleshooting:
+5. Initialize background work:
+
+```java
+import com.teragence.client.SdkControls;
+
+public class MyActivity {
+    
+    @Override
+    protected void onStart(){
+        if (isFirstStart()){
+            SdkControls.startBackgroundWork(this);
+        }
+    }
+
+    private boolean isFirstStart(){
+        Boolean pref =
+                getSharedPreferences("MySP", Context.MODE_PRIVATE)
+                                .getBoolean("isFirstStart", true);
+            if (pref) {
+                getSharedPreferences("MySP", Context.MODE_PRIVATE)
+                        .edit()
+                        .putBoolean("isFirstStart", false)
+                        .apply();
+            }
+            return pref;
+    }
+}
+
+```
+
+6. Troubleshooting:
 
 In case of the error: 
 
