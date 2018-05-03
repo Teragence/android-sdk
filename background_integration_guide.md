@@ -59,24 +59,10 @@ import com.teragence.client.SdkControls;
 public class MyActivity {
     
     @Override
-    protected void onStart(){
-        if (isFirstStart()){
-            SdkControls.startBackgroundWork(this);
-        }
+    protected void onCreate(Bundle savedInstanceState){
+        SdkControls.initialize(this);
     }
-
-    private boolean isFirstStart(){
-        Boolean pref =
-                getSharedPreferences("MySP", Context.MODE_PRIVATE)
-                                .getBoolean("isFirstStart", true);
-            if (pref) {
-                getSharedPreferences("MySP", Context.MODE_PRIVATE)
-                        .edit()
-                        .putBoolean("isFirstStart", false)
-                        .apply();
-            }
-            return pref;
-    }
+	
 }
 
 ```

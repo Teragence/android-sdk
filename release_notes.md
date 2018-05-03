@@ -1,3 +1,5 @@
- Version	    |     Description
+ Version	   |     Description
  ------------- | --------------
- 0.5.4.5    	|   JobScheduler API
+ 1.0.5.3       |   GDPR compliance
+ ------------- | --------------
+ 0.5.4.5       |   JobScheduler API
