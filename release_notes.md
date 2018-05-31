@@ -1,5 +1,6 @@
  Version	   |     Description
  ------------- | --------------
+ 1.0.5.31      |   Dropped Apache Httpclient lib usage in favour of custom code to mitigate a risk of conflicting references in partner app.
  1.0.5.24      |   ​Fixed​ crash in case when mobile network disappeared during the test starting.
  1.0.5.21      |   ​Fixed​ ​a disproportional volume of​ ​FailedMeasurement reports.
  1.0.5.18      |   Fixed crash in case of location permissions not granted.
