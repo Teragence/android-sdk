@@ -1,5 +1,6 @@
  Version	   |     Description
  ------------- | --------------
+ 1.0.6.8       |   Implemented writing to the file a errors logging if a device has no internet connection. Fixed a date sending to the server for devices which uses non arabic numbers.
  1.0.6.1       |   ​Implemented SDK-global error catching and logging system.
  1.0.5.31      |   Dropped Apache Httpclient lib usage in favour of custom code to mitigate a risk of conflicting references in partner app.
  1.0.5.24      |   ​Fixed​ crash in case when mobile network disappeared during the test starting.
