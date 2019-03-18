@@ -1,7 +1,5 @@
- Version	   |     Description
+﻿ Version	   |     Description
  ------------- | --------------
- 1.1.3.18      |   Atmospheric Pressure measurements feature was implemented.
- 1.0.12.6      |   WiFi measurements feature was implemented.
  1.0.8.7       |   Implemented collecting extra data.
  1.0.7.25      |   Resolved Insecure HostnameVerifier issue.
  1.0.6.8       |   Implemented writing to the file a errors logging if a device has no internet connection. Fixed a date sending to the server for devices which uses non arabic numbers.
