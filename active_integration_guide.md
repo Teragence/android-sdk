@@ -14,8 +14,17 @@ dependencies {
 ```
 
 To find last version visit [release notes](https://github.com/Teragence/android-sdk/blob/master/release_notes.md) 
+
+2. Add these rules to the proguard file:
+
+```
+-keep class tg_*.** { *; }
+-keep class com.teragence.** { *; }
+-dontwarn tg_*.**
+-dontwarn android.net.ConnectivityManager
+```
     
-2. Add your `partner id` as a meta-data value with name `"teragencePartnerId"` in an `AndroidManifest.xml`:
+3. Add your `partner id` as a meta-data value with name `"teragencePartnerId"` in an `AndroidManifest.xml`:
 
 ##### AndroidManifest.xml
     <application
@@ -26,18 +35,20 @@ To find last version visit [release notes](https://github.com/Teragence/android-
     
     </application>
     
-3. [Request all required runtime permissions:](https://developer.android.com/training/permissions/requesting.html)
+4. [Request all required runtime permissions:](https://developer.android.com/training/permissions/requesting.html)
 
 ```android.permission.INTERNET
 android.permission.ACCESS_COARSE_LOCATION
 android.permission.ACCESS_FINE_LOCATION
+android.permission.ACCESS_WIFI_STATE
+android.permission.CHANGE_WIFI_STATE
 android.permission.ACCESS_NETWORK_STATE
 android.permission.CHANGE_NETWORK_STATE
 android.permission.WAKE_LOCK
 android.permission.RECEIVE_BOOT_COMPLETED
 ```
 
-4. Use `com.teragence.client.Measurement` class.
+5. Use `com.teragence.client.Measurement` class.
 
 * To make a measurement, call 
 ```java
@@ -48,7 +59,7 @@ new Measurement(context).make();
 
     Pay attention that measurement doing asynchronous and take 1-2 minutes.
 
-5. Troubleshooting:
+6. Troubleshooting:
 
 In case of the error: 
 >Error:Execution failed for task ':app:transformResourcesWithMergeJavaResForDebug'.
@@ -64,3 +75,4 @@ android {
         }
 }
 ```
+

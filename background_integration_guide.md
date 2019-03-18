@@ -14,7 +14,16 @@ dependencies {
 ```
 To find last version visit [release notes](https://github.com/Teragence/android-sdk/blob/master/release_notes.md)
 
-2. Add `com.teragence.client.service.PresenceReceiver` in `AndroidManifest.xml`
+2. Add these rules to the proguard file:
+
+```
+-keep class tg_*.** { *; }
+-keep class com.teragence.** { *; }
+-dontwarn tg_*.**
+-dontwarn android.net.ConnectivityManager
+```
+
+3. Add `com.teragence.client.service.PresenceReceiver` in `AndroidManifest.xml`
 with specific intent-filter actions `QUICKBOOT_POWERON`, `BOOT_COMPLETED`:
 
 ##### AndroidManifest.xml
@@ -29,7 +38,7 @@ with specific intent-filter actions `QUICKBOOT_POWERON`, `BOOT_COMPLETED`:
         </receiver>
     </application>
     
-3. Add your `partner id` as a meta-data value with name `"teragencePartnerId"` in an `AndroidManifest.xml`:
+4. Add your `partner id` as a meta-data value with name `"teragencePartnerId"` in an `AndroidManifest.xml`:
 
 ##### AndroidManifest.xml
     <application
@@ -40,18 +49,20 @@ with specific intent-filter actions `QUICKBOOT_POWERON`, `BOOT_COMPLETED`:
     
     </application>
     
-4. [Request all required runtime permissions:](https://developer.android.com/training/permissions/requesting.html)
+5. [Request all required runtime permissions:](https://developer.android.com/training/permissions/requesting.html)
 
 ```android.permission.INTERNET
 android.permission.ACCESS_COARSE_LOCATION
 android.permission.ACCESS_FINE_LOCATION
+android.permission.ACCESS_WIFI_STATE
+android.permission.CHANGE_WIFI_STATE
 android.permission.ACCESS_NETWORK_STATE
 android.permission.CHANGE_NETWORK_STATE
 android.permission.WAKE_LOCK
 android.permission.RECEIVE_BOOT_COMPLETED
 ```
 
-5. Initialize background work:
+6. Initialize background work:
 
 ```java
 import com.teragence.client.SdkControls;
@@ -67,7 +78,7 @@ public class MyActivity {
 
 ```
 
-6. Troubleshooting:
+7. Troubleshooting:
 
 In case of the error: 
 
