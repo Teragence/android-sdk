@@ -1,5 +1,6 @@
-﻿ Version	   |     Description
+ Version	   |     Description
  ------------- | --------------
+ 1.1.3.18      |   Atmospheric Pressure measurements feature was implemented.
  1.0.12.6      |   WiFi measurements feature was implemented.
  1.0.8.7       |   Implemented collecting extra data.
  1.0.7.25      |   Resolved Insecure HostnameVerifier issue.
