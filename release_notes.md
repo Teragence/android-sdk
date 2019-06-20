@@ -1,5 +1,6 @@
  Version	   |     Description
  ------------- | --------------
+ 1.1.6.20      |   Added ability to disable mobile network tests when a user uses a Wi-Fi network.
  1.1.5.14      |   Fixed ANR while atmospheric pressure measurements.
  1.1.3.18      |   Atmospheric Pressure measurements feature was implemented.
  1.0.12.6      |   WiFi measurements feature was implemented.

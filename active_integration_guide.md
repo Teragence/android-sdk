@@ -76,3 +76,17 @@ android {
 }
 ```
 
+8. Optional:
+
+    - In the case, if you want to disable mobile network tests when a user uses
+    a Wi-Fi network add `false` as a meta-data value with the name `"mobileMeasureOnWiFi"`
+    in an `AndroidManifest.xml`:
+
+    ##### AndroidManifest.xml
+        <application
+        ...
+            <meta-data
+                android:name="teragenceMobileMeasureOnWiFi"
+                android:value="false" />
+
+        </application>
