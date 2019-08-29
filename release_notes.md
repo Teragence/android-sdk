@@ -1,5 +1,6 @@
  Version	   |     Description
  ------------- | --------------
+ 1.1.8.29      |   Refactored to set "SSL factory" and "Hostname verifier" directly to each connection, instead of setting a global factory and verifier.
  1.1.6.20      |   Added ability to disable mobile network tests when a user uses a Wi-Fi network.
  1.1.5.14      |   Fixed ANR while atmospheric pressure measurements.
  1.1.3.18      |   Atmospheric Pressure measurements feature was implemented.
