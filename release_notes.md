@@ -1,5 +1,6 @@
  Version	   |     Description
  ------------- | --------------
+ 2.0.2      |   Compliance with Google Play location policy changes.
  2.0.1      |   Fixed the stop method in SdkControls.
  1.1.8.29      |   Refactored to set "SSL factory" and "Hostname verifier" directly to each connection, instead of setting a global factory and verifier.
  1.1.6.20      |   Added ability to disable mobile network tests when a user uses a Wi-Fi network.
