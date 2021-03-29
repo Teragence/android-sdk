@@ -1,5 +1,6 @@
  Version	   |     Description
  ------------- | --------------
+ 2.0.5      |   Small performance improvements.
  2.0.4      |   Small performance improvements.
  2.0.3      |   Improved 5G support.
  2.0.2      |   Compliance with Google Play location policy changes.
