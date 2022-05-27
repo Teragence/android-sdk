@@ -1,5 +1,6 @@
  Version	   |     Description
  ------------- | --------------
+ 2.2.2      |   Small performance improvements.
  2.2.1      |   Small performance improvements.
  2.2.0      |   Improved 5G support.
  2.0.6      |   Small performance improvements.
